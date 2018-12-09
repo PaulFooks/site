@@ -11,7 +11,7 @@ function dateTimeInsert() {
 	var hours = d.getHours() < 10?"0"+d.getHours():d.getHours();
 	var minutes = d.getMinutes() < 10?"0"+d.getMinutes():d.getMinutes();
 	
-	// set date_time to the day, hyphen month + 1, another hyphen and then full year
+	// set date_time to the day, hyphen month + 1, another hyphen full year, hours, colon and minutes
     var date_time = day + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " + hours + ":" + minutes;
     
     // llo at document and get element id - "date_time". Change its innerHTML to var date_time
