@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <title>course.vpdoc: Sept - Dec 2018</title>
+
+        <script>
+
+            var isMobile = navigator.userAgent.match(/Mobile/i) != null;
+
+            function updateWebApp() {
+
+                cache = window.applicationCache;
+                cache.addEventListener('onchecking',  cacheCheckingListener, false);
+                cache.addEventListener('updateready', cacheUpdateReadyListener, false);
+                cache.addEventListener('error', cacheErrorListener, false);
+                cache.addEventListener('cached', cacheCachedListener, false);
+                cache.addEventListener('progress', cacheProgressListener, false);
+                cache.addEventListener('oncached', cacheonCachedListener, false);
+
+                //waLog("started?");
+                //waLog(window.applicationCache.status + "");
+            }
+
+            function cacheCheckingListener(event) {
+
+            }
+
+            function cacheUpdateReadyListener(event) {
+                if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+                    window.applicationCache.swapCache();
+                    window.location.reload();
+                }
+            }
+
+            function cacheCachedListener(event) {
+
+            }
+
+            function cacheErrorListener(event) {
+
+            }
+
+            function cacheProgressListener(progressEvent) {
+                //waLog(window.applicationCache.status + "");
+                // waLog(progressEvent.loaded + " of " + progressEvent.total);
+            }
+
+            function cacheonCachedListener(event) {
+                //waLog("First time cached.");
+            }
+
+            function waLog(v) {
+                document.getElementById("cons").innerHTML = document.getElementById("cons").innerHTML + "<br/>!" + v
+            }
+
+            var swapped = false;
+
+            // Check if a new cache is available on page load.
+            window.addEventListener('load', function(e) {
+
+                var isIndexPage = "sept - dec 2018.html" == "index.html";
+
+                if (isIndexPage && isMobile && window.navigator.onLine) {
+                    updateWebApp();
+                }
+
+                if (history.previous) {
+                    alert("previous!");
+                }
+
+            }, false);
+
+        </script>
+
+        <style type="text/css">
+
+            /*! modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
+            html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}:root{-moz-tab-size:4;tab-size:4}html{line-height:1.3}body{margin:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'}h1{font-size:2em;margin:.67em 0}hr{height:0}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:SFMono-Regular,Consolas,'Liberation Mono',Menlo,Courier,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{padding:0}progress{vertical-align:baseline}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}
+            /*# sourceMappingURL=/sm/b8427ae79f001842dec31421d2331d1bf01b09f0794a6b49d15ae566d4d6b5b7.map */
+
+            .cf:before,
+            .cf:after {
+                content: " "; /* 1 */
+                display: table; /* 2 */
+            }
+
+            .cf:after {
+                clear: both;
+            }
+
+            .cf {
+                *zoom: 1;
+            }
+
+            body {
+                background: #e8e8e8;
+            }
+
+            a {
+                color: #217dae;
+            }
+
+                a:hover {
+                    color: #17587b;
+                }
+
+            li {
+                margin-left: 16px;
+                margin-bottom: 4px;
+                font-size: 80%;
+            }
+
+            p {
+                line-height: 1.2em !important;
+            }
+
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .toolbar {
+                width: 100%;
+                padding: 6px 6px;
+                background: #EAEAEA;
+                background: -webkit-linear-gradient(to bottom, #F5F5F5, #EAEAEA);
+                background: linear-gradient(to bottom, #F5F5F5, #EAEAEA);
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+                .toolbar-buttons {
+                    text-align: center;
+                    margin: 0 auto;
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                    .toolbar-button {
+                        background: #F8F8F8;
+                        background: -webkit-linear-gradient(to bottom, #F8F8F8, #F2F2F2);
+                        background: linear-gradient(to bottom, #F8F8F8, #F2F2F2);
+                        border: 1px solid rgba(0,0,0,0.20);
+                        box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+                        border-radius: 4px;
+                        display: inline-block;
+                        float: left;
+                        background-clip: padding-box;
+                        text-indent: -9999px;
+                        margin-right: 8px;
+                        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
+                        .button-back {
+                            margin-right: 0;
+                            border-radius: 4px 0 0 4px;
+                            border-right: 0 !important;
+                        }
+
+                        .button-forward {
+                            border-radius: 0 4px 4px 0;
+                        }
+
+                        .toolbar-button svg {
+                            width: 18px;
+                            height: 18px;
+                            display: block;
+                            margin: 4px 6px;
+                            -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                            fill: #626262;
+                        }
+
+                        .toolbar-button:hover {
+                            background: #FFFFFF;
+                            border: 1px solid rgba(0,0,0,0.25);
+                            box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+                        }
+
+                            .toolbar-button:hover svg {
+                                fill: #000000;
+                            }
+
+            .content {
+                padding: 16px;
+                max-width: 960px;
+                margin: 0 auto;
+            }
+
+                .content-box {
+                    background: #FFFFFF;
+                    border-radius: 6px;
+                    box-shadow: 0 2px 4px rgba(64,83,97,0.05);
+                    border: 1px solid rgba(0,0,0,0.20);
+                    border-width: 1px 1px 4px 1px;
+                    padding: 22px 24px 32px 24px;
+                }
+
+                .title {
+                    text-align: center;
+                    width: 100%;
+                    margin: 8px auto 24px auto;
+                    font-weight: 600;
+                }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="toolbar">
+            <div class="toolbar-buttons">
+                <a href="javascript:window.history.back();" class="toolbar-button button-back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M12 16a.997.997 0 0 1-.707-.293l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 1 1 1.414 1.414L7.414 9l5.293 5.293A1 1 0 0 1 12 16z" /></svg></a>
+                <a href="javascript:window.history.forward();" class="toolbar-button button-forward"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M6 16a1 1 0 0 1-.707-1.707L10.586 9 5.293 3.707a1 1 0 0 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6A.997.997 0 0 1 6 16z" /></svg></a>
+                <a href="javascript:document.location='index.html';" class="toolbar-button button-start"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg></a>
+                <a href="javascript:document.location='_page_index.html';" class="toolbar-button button-list"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg></a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="content-box">
+
+                <h3 class="title">Sept - Dec 2018</h3>
+
+                <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 30.0px Helvetica; color: #1d1d1d}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Helvetica; color: #888888}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Lucida Grande'; min-height: 15.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 26.0px; font: 21.3px Helvetica; color: #183c66}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.0px; font: 16.0px Helvetica; color: #4b88cb}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 14.7px Helvetica; color: #000000; color: rgba(0, 0, 0, 0.85)}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Helvetica; color: #2d2d2d; min-height: 16.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 14.7px Helvetica; color: #000000; color: rgba(0, 0, 0, 0.85); background-color: #ffffff}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 14.7px Helvetica; color: #000000; color: rgba(0, 0, 0, 0.85); background-color: #ffffff; min-height: 17.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 22.0px; font: 18.7px Helvetica; color: #2560a6}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px Arial; color: #000000; color: rgba(0, 0, 0, 0.85); min-height: 14.0px}
+    span.s1 {letter-spacing: -1.0px}
+    span.s2 {font-kerning: none; background-color: #ffffff}
+    span.s3 {font-kerning: none; color: rgba(0, 0, 0, 0.85); background-color: #ffffff}
+    span.s4 {font-kerning: none}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+
+<p class="p1"><span class="s1"><b>Sept - Dec, Year 13</b></span></p>
+<p class="p2">Computer Science</p>
+<p class="p3"><br></p>
+<p class="p4"><span class="s2">Chapter 8 - Queues and stacks</span></p>
+<p class="p5"><span class="s2">20181030 – start&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg. 57&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Queues&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg. 253&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 187&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Lists&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 194&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Stacks&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg. 259&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 198</span></p>
+<p class="p7"><br></p>
+<p class="p4"><span class="s2">Chapter 9 - Graphs and Trees</span><span class="s3">&nbsp;</span></p>
+<p class="p5"><span class="s2">20181030 – start&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg. 67&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Graphs&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg. 262&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 207&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Trees&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg. 271&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 211</span></p>
+<p class="p7"><br></p>
+<p class="p4"><span class="s2">Chapter 10 - Hash tables and Dictionaries</span><span class="s3">&nbsp;&nbsp;</span></p>
+<p class="p5"><span class="s2">20181102 – start&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg.77&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Hash tables&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg. 285&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Dictionaries&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg. 299&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Hash tables and Dictionaries&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 202</span></p>
+<p class="p7"><br></p>
+<p class="p4"><span class="s2">Chapter 11 - Vectors</span></p>
+<p class="p5"><span class="s2">20181108 – start&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg.84&nbsp;</span></p>
+<p class="p5"><span class="s2">20181109&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg. 300&nbsp;</span></p>
+<p class="p8"><span class="s4"><span class="Apple-tab-span">	</span>PG Online, pg. 217</span></p>
+<p class="p9"><span class="s4"></span><br></p>
+<p class="p4"><span class="s2">Chapter 12 - Graph and Tree traversal – BEWARE!&nbsp;</span></p>
+<p class="p6"><span class="s2"><b>TRAVERSAL CHAPTER IS SEPARATE TO&nbsp; CHAPTER 9 IN THE HODDER BOOK. WE MAY COVER IT – JUST DON'T FORGET ABOUT IT!</b>&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg. 92&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Tree traversal&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg.312&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online&nbsp;pg&nbsp;213&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Graph traversal&nbsp;</i></span></p>
+<p class="p8"><span class="s4"><span class="Apple-tab-span">	</span>Bond Unit 1,&nbsp;pg&nbsp;304</span></p>
+<p class="p9"><span class="s4"></span><br></p>
+<p class="p4"><span class="s2">43. Relational Databases&nbsp;</span></p>
+<p class="p5"><span class="s2">20181115 – start&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg. 364&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 2, pg. 486&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p4"><span class="s2">Chapter 44 - Structured Query Languages&nbsp;</span></p>
+<p class="p5"><span class="s2">20181116 – start.&nbsp;20181120 - continued&nbsp;&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg. 375&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 2, pg. 519&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Introduction to SQL pg. 330&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Defining and updating tables using SQL pg.336&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Serialisation&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 2, pg. 257&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 18&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Serialisation&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 2, pg. 257&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 187&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p4"><span class="s2">Chapter 45 - Big Data&nbsp;</span></p>
+<p class="p5"><span class="s2">20181120 – start. Continue&nbsp;&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder&nbsp;pg. 382&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 2, pg. 543&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online&nbsp;pg. 374&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p5"><span class="s2">Check with Year 13's that they have covered The binary number system: Floating point numbers,&nbsp;Normalisation&nbsp;and precision, Absolute, relative and round errors.&nbsp;</span></p>
+<p class="p5"><span class="s2">Pre-release for Mock exam given to students.&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p4"><span class="s2">Chapter 46 - Basics of functional programming&nbsp;</span></p>
+<p class="p5"><span class="s2">20181122 – start. 20181123 - continued&nbsp;&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder&nbsp;pg. 394&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 2, pg. 561&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online&nbsp;pg. 360&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p10"><span class="s2">Computer Science in action trip with Y12's&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p4"><span class="s2">Chapter 12 – Graph and tree traversal&nbsp;</span></p>
+<p class="p5"><span class="s2">20181129 – start. 20181130, 20181204 – continued.&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg.92&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg.304&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online&nbsp;pg.243&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p4"><span class="s2">Chapter 13 – Dijkstra's shortest path algorithm&nbsp;</span></p>
+<p class="p5"><span class="s2">20181204 – start. 20181206 – continued.&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg.101&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg.348&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online&nbsp;pg.249&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p4"><span class="s2">Chapter 14 – Search algorithms – binary, binary tree and linear search&nbsp;</span></p>
+<p class="p5"><span class="s2">20181206 – start.&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg.110&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg.322&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 235&nbsp;</span></p>
+<p class="p5"><span class="s2"><i>Optimization&nbsp;</i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 2, pg. 257&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online, pg. 249&nbsp;</span></p>
+<p class="p6"><span class="s2">&nbsp;</span></p>
+<p class="p4"><span class="s2">Chapter 15 – Reverse Polish Notation&nbsp;</span></p>
+<p class="p5"><span class="s2">20181206 – start.&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Hodder pg.117&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>Bond Unit 1, pg.322&nbsp;</span></p>
+<p class="p6"><span class="s2"><span class="Apple-tab-span">	</span>PG Online&nbsp;pg.249&nbsp;</span></p>
+<p class="p11"><span class="s4"></span><br></p>
+<p class="p11"><span class="s4"></span><br></p>
+
+
+            </div>
+
+        </div>
+    </body>
+</html>
