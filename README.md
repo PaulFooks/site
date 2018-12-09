@@ -6,7 +6,11 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Links
 
-[Year_7:site:index.html](Year_7/site/index.html)
+[Year 7:site:index.html](Year_7/site/index.html)
+
+<!--[Year 8:snake](Year_8/snake)-->
+
+[Year 10:site:index.html](Year_10/site/index.html)
 
 ### Markdown
 
